@@ -1,7 +1,4 @@
-package Main;
-
 import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.util.Random;
 
 public class Tank extends Frame {
@@ -19,7 +16,7 @@ public class Tank extends Frame {
         this.dir=dir;
         this.group=group;
 
-        this.Width=ResourceMgr.badTankU.getWidth();
+        this.Width= ResourceMgr.badTankU.getWidth();
         this.Height=ResourceMgr.badTankU.getHeight();
     }
     public boolean isLive() {
@@ -82,7 +79,7 @@ public class Tank extends Frame {
     }
     private void boundsCheck() {
 
-        if(x<0||y<30||x+Width>TankFrame.GAME_WIDTH||y+Height>TankFrame.GAME_HEIGHT){
+        if(x<0||y<30||x+Width> TankFrame.GAME_WIDTH||y+Height> TankFrame.GAME_HEIGHT){
            x=oldX;
            y=oldY;
 

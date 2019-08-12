@@ -1,7 +1,4 @@
-package Main;
-
 import java.awt.*;
-import java.awt.image.BufferedImage;
 
 public class Explode {
     private int x,y;
@@ -13,8 +10,8 @@ public class Explode {
     public Explode(int x, int y) {
         this.x = x;
         this.y = y;
-        this.width=ResourceMgr.explodes[0].getWidth();
-        this.height=ResourceMgr.explodes[0].getHeight();
+        this.width= ResourceMgr.explodes[0].getWidth();
+        this.height= ResourceMgr.explodes[0].getHeight();
 
     }
     public boolean isLive() {
@@ -34,7 +31,7 @@ public class Explode {
 
 //System.out.println(count);
 
-        if(count>=ResourceMgr.explodes.length){
+        if(count>= ResourceMgr.explodes.length){
             count=0;
             Die();
 

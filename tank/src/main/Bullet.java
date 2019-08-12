@@ -1,7 +1,4 @@
-package Main;
-
 import java.awt.*;
-import java.awt.event.KeyEvent;
 
 public class Bullet {
     private int x,y;
@@ -9,7 +6,7 @@ public class Bullet {
     private Dir dir;
     private Group group;
     private boolean live=true;
-    public Bullet(int x, int y, Dir dir,Group group) {
+    public Bullet(int x, int y, Dir dir, Group group) {
         this.x = x;
         this.y = y;
         this.dir = dir;
@@ -44,9 +41,9 @@ public class Bullet {
     public void collidesWithTank(Tank tank){
         if(!this.isLive()||!tank.isLive())return;
         if(this.group==tank.getGroup())return;
-        Rectangle rect=new Rectangle(x,y,ResourceMgr.bulletU.getWidth(),ResourceMgr.bulletU.getHeight());
+        Rectangle rect=new Rectangle(x,y, ResourceMgr.bulletU.getWidth(), ResourceMgr.bulletU.getHeight());
         Rectangle rectTank=new Rectangle(tank.getX(),tank.getY(),
-                ResourceMgr.badTankU.getWidth(),ResourceMgr.badTankU.getHeight());
+                ResourceMgr.badTankU.getWidth(), ResourceMgr.badTankU.getHeight());
         if(rect.intersects(rectTank)){
             this.Die();
             tank.Die();
@@ -54,7 +51,7 @@ public class Bullet {
     }
     private void boundsCheck() {
       //  System.out.println(x+"--"+y);
-        if(x<0||y<30||x>TankFrame.GAME_WIDTH||y>TankFrame.GAME_HEIGHT){
+        if(x<0||y<30||x> TankFrame.GAME_WIDTH||y> TankFrame.GAME_HEIGHT){
             this.Die();
 
         }
