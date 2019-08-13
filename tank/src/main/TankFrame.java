@@ -25,13 +25,15 @@ public class TankFrame extends Frame {
     }
 
     private void initGameObjects() {
+       System.out.println();
         myTank = new Player(100, 200, Dir.R, Group.GOOD);
         enny = new Tank(50, 50, Dir.U, Group.BAD);
         //explode=new Explode(50,50);
         bulletlist = new ArrayList<>();
         tanks=new ArrayList<>();
         explodes=new ArrayList<>();
-        for(int i=0;i<10;i++){
+        int initTankCounts=Integer.parseInt(PropertyMgr.get("initTankCounts"));
+        for(int i=0;i<initTankCounts;i++){
             tanks.add( new Tank(50+50*i,50,Dir.U, Group.BAD));
         }
     }
