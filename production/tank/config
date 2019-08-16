@@ -1,1 +1,2 @@
 initTankCounts=5
+tankFireStrategy=DefaultFireStrategy
