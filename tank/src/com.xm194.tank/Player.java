@@ -6,7 +6,7 @@ import com.xm194.tank.strategy.FireStrategy;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public class Player extends Frame {
+public class Player extends AbstractGameObject {
     private int x,y;
     static final int SPEED=4;
     private Dir dir;

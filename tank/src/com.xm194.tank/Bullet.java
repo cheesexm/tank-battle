@@ -2,7 +2,7 @@ package com.xm194.tank;
 
 import java.awt.*;
 
-public class Bullet {
+public class Bullet extends AbstractGameObject{
     private int x,y;
     public static final int SPEED=12;
     private Dir dir;

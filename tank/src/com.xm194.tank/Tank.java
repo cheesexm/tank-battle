@@ -3,7 +3,7 @@ package com.xm194.tank;
 import java.awt.*;
 import java.util.Random;
 
-public class Tank extends Frame {
+public class Tank extends AbstractGameObject {
     private int x,y,oldX,oldY,Width,Height;
     static final int SPEED=3;
     private Dir dir;
